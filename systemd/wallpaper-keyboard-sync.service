@@ -1,0 +1,12 @@
+[Unit]
+Description=Sincroniza a cor do teclado RGB com a cor dominante do wallpaper
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/wallpaper-keyboard-watch.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target
